@@ -1,5 +1,19 @@
 # ========================================
-# Python
+# Ignore model weights and checkpoints
+# ========================================
+models/
+*.pt
+*.pth
+
+# ========================================
+# Logs, metrics, and plots
+# ========================================
+logs/
+metrics/
+plots/
+
+# ========================================
+# Python cache and environment files
 # ========================================
 __pycache__/
 *.py[cod]
@@ -12,40 +26,18 @@ env/
 *.ipynb_checkpoints
 
 # ========================================
-# Project Artifacts
+# Temporary and cache files
 # ========================================
-
-# Models
-models/
-*.pt
-*.pth
-
-# Training logs
-logs/
-*.log
-
-# Metrics and plots
-metrics/
-plots/
-
-# Temporary / cache files
 *.tmp
 *.cache
 .cache/
 tmp/
 *.bak
 
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
 # ========================================
-# OS Files
+# IDE / OS files
 # ========================================
 .DS_Store
 Thumbs.db
-
-# ========================================
-# Virtual Environments / Configs
-# ========================================
 .idea/
 .vscode/
