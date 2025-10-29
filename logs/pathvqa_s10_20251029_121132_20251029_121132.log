@@ -1,0 +1,100 @@
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - ==================================================
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - PathVQA Yes/No Model Training Pipeline
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - ==================================================
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - Logging to: /Users/selinaschlegel/Github_Projekte/APS360/logs/pathvqa_s10_20251029_121132_20251029_121132.log
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - 
+Step 1: Finding optimal hyperparameters with Optuna...
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - Starting hyperparameter optimization with Optuna (1 trials)
+2025-10-29 12:11:32,140 - pathvqa_s10_20251029_121132 - INFO - Using 3000 samples for hyperparameter optimization
+2025-10-29 12:11:32,141 - pathvqa_s10_20251029_121132 - INFO - 
+Starting Optuna trials...
+2025-10-29 12:11:32,141 - pathvqa_s10_20251029_121132 - INFO - ==================================================
+2025-10-29 12:11:32,141 - pathvqa_s10_20251029_121132 - INFO - 
+Trial 1/1:
+2025-10-29 12:11:32,141 - pathvqa_s10_20251029_121132 - INFO - Testing: dropout=0.302, lr=0.000012, weight_decay=0.000009, batch_size=16
+2025-10-29 12:13:13,592 - pathvqa_s10_20251029_121132 - INFO - Training with 3000 training samples and 3000 validation samples
+2025-10-29 12:13:13,592 - pathvqa_s10_20251029_121132 - INFO - Hyperparameters: lr=1.2442880489181855e-05, batch_size=16, dropout=0.302251013787459, weight_decay=9.484555296135257e-06
+2025-10-29 12:13:14,445 - pathvqa_s10_20251029_121132 - INFO - Epoch 1/5:
+2025-10-29 12:14:40,482 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.4810, Accuracy: 0.7393
+2025-10-29 12:15:10,356 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.4082, Validation Accuracy: 0.7987
+2025-10-29 12:15:10,359 - pathvqa_s10_20251029_121132 - INFO - Epoch 2/5:
+2025-10-29 12:16:51,300 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.2860, Accuracy: 0.8663
+2025-10-29 12:17:30,667 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5303, Validation Accuracy: 0.7440
+2025-10-29 12:17:30,668 - pathvqa_s10_20251029_121132 - INFO - Epoch 3/5:
+2025-10-29 12:18:57,927 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.2263, Accuracy: 0.9013
+2025-10-29 12:19:35,549 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.6327, Validation Accuracy: 0.7503
+2025-10-29 12:19:35,550 - pathvqa_s10_20251029_121132 - INFO - Early stopping: validation loss increased 3 times in a row.
+2025-10-29 12:19:36,422 - pathvqa_s10_20251029_121132 - INFO - Trial result: validation accuracy = 0.7503
+2025-10-29 12:19:36,458 - pathvqa_s10_20251029_121132 - INFO - 
+==================================================
+2025-10-29 12:19:36,459 - pathvqa_s10_20251029_121132 - INFO - Optuna completed 1 trials.
+2025-10-29 12:19:36,459 - pathvqa_s10_20251029_121132 - INFO - 
+Best hyperparameters found:
+2025-10-29 12:19:36,460 - pathvqa_s10_20251029_121132 - INFO - {
+  "dropout": 0.302251013787459,
+  "lr": 1.2442880489181855e-05,
+  "weight_decay": 9.484555296135257e-06,
+  "batch_size": 16
+}
+2025-10-29 12:19:36,460 - pathvqa_s10_20251029_121132 - INFO - Best validation accuracy: 0.7503
+2025-10-29 12:19:36,461 - pathvqa_s10_20251029_121132 - INFO - Best parameters saved to /Users/selinaschlegel/Github_Projekte/APS360/models/best_params_s10.json
+2025-10-29 12:21:04,816 - pathvqa_s10_20251029_121132 - INFO - 
+Step 2: Training final model with 10 samples and best hyperparameters...
+2025-10-29 12:22:44,094 - pathvqa_s10_20251029_121132 - INFO - Training with 10 training samples and 10 validation samples
+2025-10-29 12:22:44,095 - pathvqa_s10_20251029_121132 - INFO - Hyperparameters: lr=1.2442880489181855e-05, batch_size=16, dropout=0.302251013787459, weight_decay=9.484555296135257e-06
+2025-10-29 12:22:49,012 - pathvqa_s10_20251029_121132 - INFO - Epoch 1/10:
+2025-10-29 12:22:54,634 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.6805, Accuracy: 0.5000
+2025-10-29 12:22:54,704 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.6524, Validation Accuracy: 0.8000
+2025-10-29 12:22:54,704 - pathvqa_s10_20251029_121132 - INFO - Epoch 2/10:
+2025-10-29 12:22:54,922 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.6491, Accuracy: 0.8000
+2025-10-29 12:22:54,977 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.6387, Validation Accuracy: 0.8000
+2025-10-29 12:22:54,977 - pathvqa_s10_20251029_121132 - INFO - Epoch 3/10:
+2025-10-29 12:22:55,189 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.6409, Accuracy: 0.6000
+2025-10-29 12:22:55,246 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.6248, Validation Accuracy: 0.8000
+2025-10-29 12:22:55,246 - pathvqa_s10_20251029_121132 - INFO - Epoch 4/10:
+2025-10-29 12:22:55,457 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.6030, Accuracy: 0.8000
+2025-10-29 12:22:55,516 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.6116, Validation Accuracy: 0.8000
+2025-10-29 12:22:55,516 - pathvqa_s10_20251029_121132 - INFO - Epoch 5/10:
+2025-10-29 12:22:55,728 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.6018, Accuracy: 0.5000
+2025-10-29 12:22:55,786 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5994, Validation Accuracy: 0.8000
+2025-10-29 12:22:55,787 - pathvqa_s10_20251029_121132 - INFO - Epoch 6/10:
+2025-10-29 12:22:55,999 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.5846, Accuracy: 0.7000
+2025-10-29 12:22:56,058 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5889, Validation Accuracy: 0.8000
+2025-10-29 12:22:56,058 - pathvqa_s10_20251029_121132 - INFO - Epoch 7/10:
+2025-10-29 12:22:56,267 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.5704, Accuracy: 0.8000
+2025-10-29 12:22:56,329 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5784, Validation Accuracy: 0.8000
+2025-10-29 12:22:56,329 - pathvqa_s10_20251029_121132 - INFO - Epoch 8/10:
+2025-10-29 12:22:56,543 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.5529, Accuracy: 0.8000
+2025-10-29 12:22:56,607 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5686, Validation Accuracy: 0.8000
+2025-10-29 12:22:56,607 - pathvqa_s10_20251029_121132 - INFO - Epoch 9/10:
+2025-10-29 12:22:56,819 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.5333, Accuracy: 1.0000
+2025-10-29 12:22:56,875 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5592, Validation Accuracy: 0.8000
+2025-10-29 12:22:56,875 - pathvqa_s10_20251029_121132 - INFO - Epoch 10/10:
+2025-10-29 12:22:57,093 - pathvqa_s10_20251029_121132 - INFO - Train Loss: 0.5367, Accuracy: 0.8000
+2025-10-29 12:22:57,151 - pathvqa_s10_20251029_121132 - INFO - Validation Loss: 0.5497, Validation Accuracy: 0.8000
+2025-10-29 12:22:58,683 - pathvqa_s10_20251029_121132 - INFO - Model saved to /Users/selinaschlegel/Github_Projekte/APS360/models/pathvqa_yesno_model_s10.pt
+2025-10-29 12:22:58,683 - pathvqa_s10_20251029_121132 - INFO - Training metrics saved to /Users/selinaschlegel/Github_Projekte/APS360/metrics/pathvqa_yesno_model_s10.json
+2025-10-29 12:22:58,688 - pathvqa_s10_20251029_121132 - INFO - 
+Step 3: Evaluating final model...
+2025-10-29 12:23:44,591 - pathvqa_s10_20251029_121132 - INFO - Test Metrics:
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   Accuracy: 0.5402
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   Precision: 0.5402
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   Recall: 1.0000
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   Sensitivity: 1.0000
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   Specificity: 0.0000
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   F1 Score: 0.7014
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -   Confusion Matrix:
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -     True Negatives: 0
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -     False Positives: 1546
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -     False Negatives: 0
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO -     True Positives: 1816
+2025-10-29 12:23:44,592 - pathvqa_s10_20251029_121132 - INFO - Test metrics saved to /Users/selinaschlegel/Github_Projekte/APS360/metrics/test_metrics_sAll.json
+2025-10-29 12:23:44,697 - pathvqa_s10_20251029_121132 - INFO - 
+Step 4: Generating performance visualizations...
+2025-10-29 12:23:44,917 - pathvqa_s10_20251029_121132 - INFO - Accuracy plot saved to /Users/selinaschlegel/Github_Projekte/APS360/plots/accuracy_s10.png
+2025-10-29 12:23:45,330 - pathvqa_s10_20251029_121132 - INFO - Metrics plot saved to /Users/selinaschlegel/Github_Projekte/APS360/plots/metrics_s10.png
+2025-10-29 12:23:45,330 - pathvqa_s10_20251029_121132 - INFO - 
+==================================================
+2025-10-29 12:23:45,330 - pathvqa_s10_20251029_121132 - INFO - Training pipeline completed successfully!
+2025-10-29 12:23:45,330 - pathvqa_s10_20251029_121132 - INFO - ==================================================
+2025-10-29 12:23:45,330 - pathvqa_s10_20251029_121132 - INFO - Full logs saved to: /Users/selinaschlegel/Github_Projekte/APS360/logs/pathvqa_s10_20251029_121132_20251029_121132.log
