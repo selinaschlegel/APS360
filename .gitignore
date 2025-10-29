@@ -1,9 +1,8 @@
 # ========================================
 # Ignore model weights and checkpoints
 # ========================================
-models/
-*.pt
-*.pth
+models/*.pt
+models/*.pth
 
 # ========================================
 # Logs, metrics, and plots
