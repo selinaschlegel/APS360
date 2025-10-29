@@ -1,0 +1,51 @@
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv
+venv/
+ENV/
+env/
+*.ipynb_checkpoints
+
+# ========================================
+# Project Artifacts
+# ========================================
+
+# Models
+models/
+*.pt
+*.pth
+
+# Training logs
+logs/
+*.log
+
+# Metrics and plots
+metrics/
+plots/
+
+# Temporary / cache files
+*.tmp
+*.cache
+.cache/
+tmp/
+*.bak
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# ========================================
+# OS Files
+# ========================================
+.DS_Store
+Thumbs.db
+
+# ========================================
+# Virtual Environments / Configs
+# ========================================
+.idea/
+.vscode/
